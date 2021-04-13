@@ -7,7 +7,7 @@ scene = new THREE.Scene();
       camera.rotation.x = Math.PI/2;
 
       renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight * 5/4);
+      renderer.setSize(window.innerWidth, window.innerHeight);
       parent = document.getElementById('intro');
       parent.appendChild(renderer.domElement);
 

@@ -34,6 +34,7 @@ const sliderScene = new ScrollMagic.Scene({
     if (e.scrollDirection == "FORWARD"){
         document.getElementById('slider').classList.remove('backward');
         document.getElementById('slider').classList.add('forward');
+        document.getElementById('text-box').classList.add('slide');
     } else if(e.scrollDirection == "REVERSE") {
         document.getElementById('slider').style.width = '90%';
     }
@@ -44,6 +45,7 @@ const sliderScene = new ScrollMagic.Scene({
     } else if(e.scrollDirection == "REVERSE") {
         document.getElementById('slider').classList.remove('forward');
         document.getElementById('slider').classList.add('backward');
+        document.getElementById('text-box').classList.remove('slide');
     }
 })
 .addIndicators()
