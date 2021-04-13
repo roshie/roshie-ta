@@ -4,6 +4,8 @@ window.onload = function() {
     document.body.style.position = 'static';
     init();
     document.getElementById('content').style.display = 'block';
+    var offset = document.getElementById('hero').style.height;
+    console.log(offset);
 }
 
 // const hello = document.querySelectorAll("#hello-outline path");
@@ -11,17 +13,33 @@ window.onload = function() {
 //     console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
 // }
 
+const controller = new ScrollMagic.Controller();
+
+const scenee = new ScrollMagic.Scene({
+    duration: 200,
+    triggerHook: 0,
+    reverse: true,
+    offset: 50
+})
+.setClassToggle('.slider', 'move')
+.addIndicators()
+.setPin("#intro", {pushFollowers: false})
+.addTo(controller);
+
 // const controller = new ScrollMagic.Controller();
 
+
 // const scenee = new ScrollMagic.Scene({
-//     triggerElement: '.hero',
 //     duration: 2000,
-//     triggerHook: 0,
+//     triggerHook: 0.1,
 //     reverse: true,
+//     offset: document.getElementById('hero').style.height,
 // })
 // .setClassToggle('.slider', 'move')
 // .addIndicators()
+// .setPin("#intro", {pushFollowers: true})
 // .addTo(controller);
+
 
 
 // var SM = {
