@@ -54,17 +54,17 @@ canvas {
 #slider {
   position: absolute;
   height: 125vh;
-  width: 0%;
+  width: 100%;
   right: 0%;
   top: 0%;
-  background-color: #cc005f;
+  background-color: #cc005fd5;
 }
 #slider.forward {
   width: 90% !important;
   transition: width 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
 }
 #slider.backward {
-  width: 0% !important;
+  width: 5% !important;
   transition: width 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
 }
 .heading {
