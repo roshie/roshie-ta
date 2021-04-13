@@ -20,6 +20,12 @@ canvas {
   left: 50%;
   margin-left: -39px;
   margin-top: -39px;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+}
+#loader.slide {
+  left: 125%;
+  opacity: 0;
 }
 #content {
   margin: 0%;
@@ -27,13 +33,9 @@ canvas {
 }
 #intro {
   position: relative;
-  height: 125vh;
+  height: 100vh;
   margin: 0%;
-  /* margin-top: 0vh; */
 }
-/* #background {
-  align-items: center;
-} */
 #hero {
   margin: 0;
   height: 100vh;
@@ -53,11 +55,12 @@ canvas {
 
 #slider {
   position: absolute;
-  height: 125vh;
+  height: 100vh;
   width: 100%;
   right: 0%;
   top: 0%;
   background-color: #cc005fd5;
+  overflow: hidden;
 }
 #slider.forward {
   width: 90% !important;
@@ -81,173 +84,158 @@ canvas {
 }
 
 /* loader css codes */
-@keyframes ldio-up4q46d2rjg {
+@keyframes ldio-9atrfbazgt {
   0% {
-    transform: rotate(0);
+    transform: translate(6.42px, 42.800000000000004px) scale(0);
+  }
+  25% {
+    transform: translate(6.42px, 42.800000000000004px) scale(0);
+  }
+  50% {
+    transform: translate(6.42px, 42.800000000000004px) scale(1);
+  }
+  75% {
+    transform: translate(42.800000000000004px, 42.800000000000004px) scale(1);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(79.18px, 42.800000000000004px) scale(1);
   }
 }
-.ldio-up4q46d2rjg div {
-  box-sizing: border-box !important;
+@keyframes ldio-9atrfbazgt-r {
+  0% {
+    transform: translate(79.18px, 42.800000000000004px) scale(1);
+  }
+  100% {
+    transform: translate(79.18px, 42.800000000000004px) scale(0);
+  }
 }
-.ldio-up4q46d2rjg > div {
+@keyframes ldio-9atrfbazgt-c {
+  0% {
+    background: #ffffff;
+  }
+  25% {
+    background: #ffffff;
+  }
+  50% {
+    background: #ffffff;
+  }
+  75% {
+    background: #ffffff;
+  }
+  100% {
+    background: #ffffff;
+  }
+}
+.ldio-9atrfbazgt div {
   position: absolute;
-  width: 72px;
-  height: 72px;
-  top: 14px;
-  left: 14px;
+  width: 21.400000000000002px;
+  height: 21.400000000000002px;
   border-radius: 50%;
-  border: 8px solid #000;
-  border-color: #cc005f transparent #cc005f transparent;
-  animation: ldio-up4q46d2rjg 1.4925373134328357s linear infinite;
-}
-
-.ldio-up4q46d2rjg > div:nth-child(2),
-.ldio-up4q46d2rjg > div:nth-child(4) {
-  width: 54px;
-  height: 54px;
-  top: 23px;
-  left: 23px;
-  animation: ldio-up4q46d2rjg 1.4925373134328357s linear infinite reverse;
-}
-.ldio-up4q46d2rjg > div:nth-child(2) {
-  border-color: transparent #ffffff transparent #ffffff;
-}
-.ldio-up4q46d2rjg > div:nth-child(3) {
-  border-color: transparent;
-}
-.ldio-up4q46d2rjg > div:nth-child(3) div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: rotate(45deg);
-}
-.ldio-up4q46d2rjg > div:nth-child(3) div:before,
-.ldio-up4q46d2rjg > div:nth-child(3) div:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: -8px;
-  left: 24px;
-  background: #cc005f;
-  border-radius: 50%;
-  box-shadow: 0 64px 0 0 #cc005f;
-}
-.ldio-up4q46d2rjg > div:nth-child(3) div:after {
-  left: -8px;
-  top: 24px;
-  box-shadow: 64px 0 0 0 #cc005f;
-}
-
-.ldio-up4q46d2rjg > div:nth-child(4) {
-  border-color: transparent;
-}
-.ldio-up4q46d2rjg > div:nth-child(4) div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: rotate(45deg);
-}
-.ldio-up4q46d2rjg > div:nth-child(4) div:before,
-.ldio-up4q46d2rjg > div:nth-child(4) div:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: -8px;
-  left: 15px;
+  transform: translate(42.800000000000004px, 42.800000000000004px) scale(1);
   background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 46px 0 0 #ffffff;
+  animation: ldio-9atrfbazgt 1s infinite cubic-bezier(0, 0.5, 0.5, 1);
 }
-.ldio-up4q46d2rjg > div:nth-child(4) div:after {
-  left: -8px;
-  top: 15px;
-  box-shadow: 46px 0 0 0 #ffffff;
+.ldio-9atrfbazgt div:nth-child(1) {
+  background: #ffffff;
+  transform: translate(79.18px, 42.800000000000004px) scale(1);
+  animation: ldio-9atrfbazgt-r 0.25s infinite cubic-bezier(0, 0.5, 0.5, 1),
+    ldio-9atrfbazgt-c 1s infinite step-start;
 }
-.loadingio-spinner-double-ring-a899vqbct8a {
-  width: 74px;
-  height: 74px;
+.ldio-9atrfbazgt div:nth-child(2) {
+  animation-delay: -0.25s;
+  background: #ffffff;
+}
+.ldio-9atrfbazgt div:nth-child(3) {
+  animation-delay: -0.5s;
+  background: #ffffff;
+}
+.ldio-9atrfbazgt div:nth-child(4) {
+  animation-delay: -0.75s;
+  background: #ffffff;
+}
+.ldio-9atrfbazgt div:nth-child(5) {
+  animation-delay: -1s;
+  background: #ffffff;
+}
+.loadingio-spinner-ellipsis-4l8oq9z32xw {
+  width: 107px;
+  height: 107px;
   display: inline-block;
   overflow: hidden;
   background: none;
 }
-.ldio-up4q46d2rjg {
+.ldio-9atrfbazgt {
   width: 100%;
   height: 100%;
   position: relative;
-  transform: translateZ(0) scale(0.74);
+  transform: translateZ(0) scale(1);
   backface-visibility: hidden;
   transform-origin: 0 0; /* see note above */
 }
-.ldio-up4q46d2rjg div {
+.ldio-9atrfbazgt div {
   box-sizing: content-box;
 }
+
 /* loader css codes */
 
 /* Hello there animation */
 #hello-outline {
-  animation: fill-hello 1.5s ease forwards 2s;
+  animation: fill-hello 1.5s ease forwards 4s;
 }
 #hello-outline path:nth-child(1) {
   stroke-dasharray: 408px;
   stroke-dashoffset: 408px;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(2) {
-  stroke-dasharray: 333px;
-  stroke-dashoffset: 333px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 333.87px;
+  stroke-dashoffset: 333.87px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(3) {
-  stroke-dasharray: 210px;
-  stroke-dashoffset: 210px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 210.42px;
+  stroke-dashoffset: 210.42px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(4) {
-  stroke-dasharray: 210px;
-  stroke-dashoffset: 210px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 210.42px;
+  stroke-dashoffset: 210.42px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(5) {
-  stroke-dasharray: 276px;
-  stroke-dashoffset: 276px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 276.76px;
+  stroke-dashoffset: 276.76px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(6) {
-  stroke-dasharray: 282px;
-  stroke-dashoffset: 282px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 282.52px;
+  stroke-dashoffset: 282.52px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(7) {
-  stroke-dasharray: 350px;
-  stroke-dashoffset: 350px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 350.4px;
+  stroke-dashoffset: 350.4px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(8) {
-  stroke-dasharray: 333px;
-  stroke-dashoffset: 333px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 333.87px;
+  stroke-dashoffset: 333.87px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(9) {
-  stroke-dasharray: 197px;
-  stroke-dashoffset: 197px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 197.3px;
+  stroke-dashoffset: 197.3px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(10) {
-  stroke-dasharray: 333px;
-  stroke-dashoffset: 333px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 333.87px;
+  stroke-dashoffset: 333.87px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 #hello-outline path:nth-child(11) {
-  stroke-dasharray: 63px;
-  stroke-dashoffset: 63px;
-  animation: line-anim 2s ease forwards;
+  stroke-dasharray: 63.55px;
+  stroke-dashoffset: 63.55px;
+  animation: line-anim 2s ease forwards 1.5s;
 }
 
 @keyframes line-anim {

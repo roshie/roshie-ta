@@ -1,21 +1,18 @@
 window.onload = function() {
-    
-    document.getElementById('loader').style.display = 'none';
+    setTimeout(sliderInit, 500);
     document.body.style.position = 'static';
     init();
-    document.getElementById('content').style.display = 'block';
-    setTimeout(sliderInit, 1500);
 }
 function sliderInit(){
+    document.getElementById('loader').classList.add('slide');
     document.getElementById('slider').classList.add('backward');
-    console.log("inside Slider init")
 
 }
 
-// const hello = document.querySelectorAll("#hello-outline path");
-// for (let i = 0; i<hello.length; i++){
-//     console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
-// }
+const hello = document.querySelectorAll("#hello-outline path");
+for (let i = 0; i<hello.length; i++){
+    console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
+}
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
