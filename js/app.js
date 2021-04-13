@@ -4,8 +4,12 @@ window.onload = function() {
     document.body.style.position = 'static';
     init();
     document.getElementById('content').style.display = 'block';
-    var offset = document.getElementById('hero').style.height;
-    console.log(offset);
+    sliderInit(); 
+}
+function sliderInit(){
+    // var slider = document.getElementsByClassName('slider')[0];
+    // slider.classList.add('init');
+
 }
 
 // const hello = document.querySelectorAll("#hello-outline path");
@@ -19,12 +23,44 @@ const scenee = new ScrollMagic.Scene({
     duration: 200,
     triggerHook: 0,
     reverse: true,
-    offset: 50
+    offset: 10,
 })
-.setClassToggle('.slider', 'move')
+// .on('start leave', function (e){
+// console.log(e);
+// })
+// .on('end leave', function (e){
+//     console.log(e);
+// })
+.on('enter', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+        document.getElementById('slider').classList.remove('backward');
+        document.getElementById('slider').classList.add('forward');
+    } else if(e.scrollDirection == "REVERSE") {
+        document.getElementById('slider').classList.remove('forward');
+        document.getElementById('slider').classList.add('backward');
+    }
+    console.log(e);
+})
+.on('leave', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+        document.getElementById('slider').style.width = '90%';
+    } else if(e.scrollDirection == "REVERSE") {
+        document.getElementById('slider').classList.remove('forward');
+        document.getElementById('slider').classList.add('backward');
+    }
+    console.log(e);
+})
 .addIndicators()
 .setPin("#intro", {pushFollowers: false})
 .addTo(controller);
+// .on('start leave', function () {
+//     document.getElementsByClassName('slider')[0].style.width = '0%';
+//     console.log("start leave");
+// })
+// .on('end leave', function () {
+//     document.getElementsByClassName('slider')[0].style.width = '90%';
+//     console.log("end leave");
+// })
 
 // const controller = new ScrollMagic.Controller();
 
