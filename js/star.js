@@ -19,7 +19,7 @@ scene = new THREE.Scene();
           Math.random() * 600 - 300
         );
         star.velocity = 0.3;
-        star.acceleration = 0.000;
+        star.acceleration = 0.001;
         starGeo.vertices.push(star);
       }
 
