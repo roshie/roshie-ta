@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -39px;
+  margin-top: -39px;
+}
+#content {
+  margin: 0%;
+  padding: 0;
+}
+#intro {
+  position: relative;
+  height: 125vh;
+  margin: 0%;
+  /* margin-top: 0vh; */
+}
+/* #background {
+  align-items: center;
+} */
+#hero {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.text-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  position: absolute;
+  height: 125vh;
+  width: 0%;
+  right: 0%;
+  top: 0%;
+  background-color: #8d8d8d23;
+}
+.slider.move {
+  width: 90% !important;
+  transition: width 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.heading {
+  color: #cc005f;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Raleway", sans-serif;
+  word-spacing: 12px;
+}
+
+.about {
+  padding-bottom: 100vh;
+}
+
+/* loader css codes */
+@keyframes ldio-up4q46d2rjg {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ldio-up4q46d2rjg div {
+  box-sizing: border-box !important;
+}
+.ldio-up4q46d2rjg > div {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 14px;
+  left: 14px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-color: #cc005f transparent #cc005f transparent;
+  animation: ldio-up4q46d2rjg 1.4925373134328357s linear infinite;
+}
+
+.ldio-up4q46d2rjg > div:nth-child(2),
+.ldio-up4q46d2rjg > div:nth-child(4) {
+  width: 54px;
+  height: 54px;
+  top: 23px;
+  left: 23px;
+  animation: ldio-up4q46d2rjg 1.4925373134328357s linear infinite reverse;
+}
+.ldio-up4q46d2rjg > div:nth-child(2) {
+  border-color: transparent #ffffff transparent #ffffff;
+}
+.ldio-up4q46d2rjg > div:nth-child(3) {
+  border-color: transparent;
+}
+.ldio-up4q46d2rjg > div:nth-child(3) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.ldio-up4q46d2rjg > div:nth-child(3) div:before,
+.ldio-up4q46d2rjg > div:nth-child(3) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 24px;
+  background: #cc005f;
+  border-radius: 50%;
+  box-shadow: 0 64px 0 0 #cc005f;
+}
+.ldio-up4q46d2rjg > div:nth-child(3) div:after {
+  left: -8px;
+  top: 24px;
+  box-shadow: 64px 0 0 0 #cc005f;
+}
+
+.ldio-up4q46d2rjg > div:nth-child(4) {
+  border-color: transparent;
+}
+.ldio-up4q46d2rjg > div:nth-child(4) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+.ldio-up4q46d2rjg > div:nth-child(4) div:before,
+.ldio-up4q46d2rjg > div:nth-child(4) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 15px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 46px 0 0 #ffffff;
+}
+.ldio-up4q46d2rjg > div:nth-child(4) div:after {
+  left: -8px;
+  top: 15px;
+  box-shadow: 46px 0 0 0 #ffffff;
+}
+.loadingio-spinner-double-ring-a899vqbct8a {
+  width: 74px;
+  height: 74px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+}
+.ldio-up4q46d2rjg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.74);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+}
+.ldio-up4q46d2rjg div {
+  box-sizing: content-box;
+}
+/* loader css codes */
+
+/* Hello there animation */
+#hello-outline {
+  animation: fill-hello 1.5s ease forwards 2s;
+}
+#hello-outline path:nth-child(1) {
+  stroke-dasharray: 543px;
+  stroke-dashoffset: 543px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(2) {
+  stroke-dasharray: 444px;
+  stroke-dashoffset: 444px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(3) {
+  stroke-dasharray: 280px;
+  stroke-dashoffset: 280px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(4) {
+  stroke-dasharray: 280px;
+  stroke-dashoffset: 280px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(5) {
+  stroke-dasharray: 368px;
+  stroke-dashoffset: 368px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(6) {
+  stroke-dasharray: 376px;
+  stroke-dashoffset: 376px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(7) {
+  stroke-dasharray: 466px;
+  stroke-dashoffset: 466px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(8) {
+  stroke-dasharray: 444px;
+  stroke-dashoffset: 444px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(9) {
+  stroke-dasharray: 262px;
+  stroke-dashoffset: 262px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(10) {
+  stroke-dasharray: 444px;
+  stroke-dashoffset: 444px;
+  animation: line-anim 2s ease forwards;
+}
+#hello-outline path:nth-child(11) {
+  stroke-dasharray: 84px;
+  stroke-dashoffset: 84px;
+  animation: line-anim 2s ease forwards;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-hello {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
