@@ -190,58 +190,58 @@ canvas {
   animation: fill-hello 1.5s ease forwards 2s;
 }
 #hello-outline path:nth-child(1) {
-  stroke-dasharray: 543px;
-  stroke-dashoffset: 543px;
+  stroke-dasharray: 408px;
+  stroke-dashoffset: 408px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(2) {
-  stroke-dasharray: 444px;
-  stroke-dashoffset: 444px;
+  stroke-dasharray: 333px;
+  stroke-dashoffset: 333px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(3) {
-  stroke-dasharray: 280px;
-  stroke-dashoffset: 280px;
+  stroke-dasharray: 210px;
+  stroke-dashoffset: 210px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(4) {
-  stroke-dasharray: 280px;
-  stroke-dashoffset: 280px;
+  stroke-dasharray: 210px;
+  stroke-dashoffset: 210px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(5) {
-  stroke-dasharray: 368px;
-  stroke-dashoffset: 368px;
+  stroke-dasharray: 276px;
+  stroke-dashoffset: 276px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(6) {
-  stroke-dasharray: 376px;
-  stroke-dashoffset: 376px;
+  stroke-dasharray: 282px;
+  stroke-dashoffset: 282px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(7) {
-  stroke-dasharray: 466px;
-  stroke-dashoffset: 466px;
+  stroke-dasharray: 350px;
+  stroke-dashoffset: 350px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(8) {
-  stroke-dasharray: 444px;
-  stroke-dashoffset: 444px;
+  stroke-dasharray: 333px;
+  stroke-dashoffset: 333px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(9) {
-  stroke-dasharray: 262px;
-  stroke-dashoffset: 262px;
+  stroke-dasharray: 197px;
+  stroke-dashoffset: 197px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(10) {
-  stroke-dasharray: 444px;
-  stroke-dashoffset: 444px;
+  stroke-dasharray: 333px;
+  stroke-dashoffset: 333px;
   animation: line-anim 2s ease forwards;
 }
 #hello-outline path:nth-child(11) {
-  stroke-dasharray: 84px;
-  stroke-dashoffset: 84px;
+  stroke-dasharray: 63px;
+  stroke-dashoffset: 63px;
   animation: line-anim 2s ease forwards;
 }
 
