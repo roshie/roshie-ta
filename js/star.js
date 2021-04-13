@@ -2,9 +2,6 @@ let scene, camera, renderer, stars, starGeo;
 scene = new THREE.Scene();
 
     function init() {
-
-      
-
       camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight, 1, 1000);
       camera.position.z = 1;
       camera.rotation.x = Math.PI/2;
@@ -21,8 +18,8 @@ scene = new THREE.Scene();
           Math.random() * 600 - 300,
           Math.random() * 600 - 300
         );
-        star.velocity = 0.003;
-        star.acceleration = 0.005;
+        star.velocity = 0.3;
+        star.acceleration = 0.000;
         starGeo.vertices.push(star);
       }
 
@@ -35,9 +32,6 @@ scene = new THREE.Scene();
 
       stars = new THREE.Points(starGeo,starMaterial);
       scene.add(stars);
-
-      window.addEventListener("resize", onWindowResize, false);
-
       animate(); 
     }
     function onWindowResize() {
@@ -60,11 +54,5 @@ scene = new THREE.Scene();
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     }
-   
-    window.addEventListener('resize', function(event){
-      // parent = document.getElementById('background');
-      // canvas = document.getElementsByTagName('canvas')[0];
-      // parent.removeChild(canvas);
-      // init();
-      scene.refresh();
-  });
+
+  window.addEventListener("resize", onWindowResize, false);
