@@ -8,6 +8,7 @@ function sliderInit(){
     document.getElementById('slider').classList.add('backward');
 
 }
+
 // save for later
 // const hello = document.querySelectorAll("#hello-outline path");
 // for (let i = 0; i<hello.length; i++){
@@ -51,8 +52,9 @@ const sliderScene = new ScrollMagic.Scene({
 .addIndicators()
 .addTo(controller);
 
-document.getElementById('menu-icon').addEventListener('click', function() {
-    console.log("Clicked");
+
+document.getElementById('menu-icon').addEventListener("click", function () {
+    document.getElementById('nav-icon3').classList.toggle('open');
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
@@ -61,4 +63,3 @@ document.getElementById('menu-icon').addEventListener('click', function() {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
 });
-
