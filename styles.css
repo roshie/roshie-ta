@@ -77,7 +77,47 @@ canvas {
   position: absolute;
   transition: all 0.5s cubic-bezier(0, 0, 0, 1) 1s;
 }
+#up-arrow {
+  position: absolute;
+  bottom: -50%;
+  left: 45%;
+  right: 45%;
+  width: 10%;
+  padding: 1%;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1) 1s;
+}
+#arrow {
+  margin: 10%;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+#up-arrow.slide {
+  bottom: 2%;
+  position: fixed;
+  opacity: 1;
+}
 
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+#arrow-text {
+  color: #ffffff;
+  font-family: sans-serif;
+}
 #slider {
   position: absolute;
   height: 100vh;
@@ -87,11 +127,6 @@ canvas {
   overflow: hidden;
 }
 @media only screen and (min-width: 769px) {
-  /* #menu-bar {
-    padding: 2em;
-    padding-top: 6.5em;
-    transform: scale(1); 
-  } */
   #slider {
     background-color: #cc005fd5;
   }

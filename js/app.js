@@ -6,6 +6,7 @@ window.onload = function() {
     setTimeout(function(){
         document.getElementById('menu-bar').classList.add('slide');
         document.getElementById('social-media').classList.add('slide');
+        document.getElementById('up-arrow').classList.add('slide');
     },2000)
     document.body.style.position = 'static';
     init();
@@ -38,6 +39,7 @@ const sliderScene = new ScrollMagic.Scene({
         document.getElementById('slider').classList.remove('backward');
         document.getElementById('slider').classList.add('forward');
         document.getElementById('text-box').classList.add('slide');
+        document.getElementById('up-arrow').classList.remove('slide');
     } else if(e.scrollDirection == "REVERSE") {
         document.getElementById('slider').style.width = '90%';
     }
@@ -49,6 +51,7 @@ const sliderScene = new ScrollMagic.Scene({
         document.getElementById('slider').classList.remove('forward');
         document.getElementById('slider').classList.add('backward');
         document.getElementById('text-box').classList.remove('slide');
+        document.getElementById('up-arrow').classList.add('slide');
     }
 })
 .addIndicators()
