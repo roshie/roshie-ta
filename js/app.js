@@ -5,6 +5,7 @@ window.onload = function() {
     }, 500);
     setTimeout(function(){
         document.getElementById('menu-bar').classList.add('slide');
+        document.getElementById('social-media').classList.add('slide');
     },2000)
     document.body.style.position = 'static';
     init();
@@ -27,7 +28,7 @@ const holdStars = new ScrollMagic.Scene({
 .addTo(controller);
 
 const sliderScene = new ScrollMagic.Scene({
-    duration: 200,
+    duration: 100,
     triggerHook: 0,
     reverse: true,
     offset: 20,
@@ -61,7 +62,7 @@ document.getElementById('menu-icon').addEventListener("click", function () {
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = '70%';
+      content.style.maxHeight = '75%';
       console.log(content.scrollHeight);
     } 
 });
