@@ -31,6 +31,16 @@ canvas {
   margin: 0%;
   padding: 0;
 }
+#menu {
+  position: fixed;
+  padding: 2em;
+  height: 10%;
+  overflow: hidden;
+}
+#menu-icon {
+  background-color: transparent;
+}
+
 #intro {
   position: relative;
   height: 100vh;

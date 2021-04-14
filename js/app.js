@@ -8,11 +8,11 @@ function sliderInit(){
     document.getElementById('slider').classList.add('backward');
 
 }
-
-const hello = document.querySelectorAll("#hello-outline path");
-for (let i = 0; i<hello.length; i++){
-    console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
-}
+// save for later
+// const hello = document.querySelectorAll("#hello-outline path");
+// for (let i = 0; i<hello.length; i++){
+//     console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
+// }
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
@@ -50,4 +50,15 @@ const sliderScene = new ScrollMagic.Scene({
 })
 .addIndicators()
 .addTo(controller);
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+    console.log("Clicked");
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+});
 
