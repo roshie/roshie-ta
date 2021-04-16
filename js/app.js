@@ -7,16 +7,17 @@ window.onload = function() {
         document.getElementById('menu-bar').classList.add('slide');
         document.getElementById('social-media').classList.add('slide');
         document.getElementById('up-arrow').classList.add('slide');
+        document.getElementById('sub-heading').classList.add('slide');
     },2000)
     document.body.style.position = 'static';
     init();
 }
 
 // save for later
-// const hello = document.querySelectorAll("#hello-outline path");
-// for (let i = 0; i<hello.length; i++){
-//     console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
-// }
+const hello = document.querySelectorAll("#title-small path");
+for (let i = 0; i<hello.length; i++){
+    console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
+}
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
