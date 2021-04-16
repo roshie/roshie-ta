@@ -133,16 +133,18 @@ canvas {
   top: 0%;
   overflow: hidden;
 }
+#intro-2 {
+  position: absolute;
+}
 @media only screen and (min-width: 769px) {
   #slider {
     background-color: #cc005fd5;
   }
   #text-box {
-    left: 35%;
+    transform: translate(0%, 0%);
   }
   #text-box.slide {
-    left: 1%;
-    transform: scale(0.8);
+    transform: scale(0.8) translate(-400%, 0%);
   }
   #slider.forward {
     width: 90% !important;
@@ -203,8 +205,9 @@ canvas {
   word-spacing: 12px;
 }
 
-.about {
-  padding-bottom: 100vh;
+#about {
+  /* padding-bottom: 100vh; */
+  height: 100vh;
 }
 
 /* loader css codes */
@@ -304,62 +307,62 @@ canvas {
 
 /* Hello there animation */
 #hello-outline {
-  animation: fill-hello 1.5s ease forwards 4s;
+  animation: fill-hello 1.5s ease forwards 3s;
 }
 #hello-outline path:nth-child(1) {
   stroke-dasharray: 408px;
   stroke-dashoffset: 408px;
-  animation: line-anim 2s ease forwards 1.7s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.7s;
 }
 #hello-outline path:nth-child(2) {
   stroke-dasharray: 333.87px;
   stroke-dashoffset: 333.87px;
-  animation: line-anim 2s ease forwards 1.7s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.7s;
 }
 #hello-outline path:nth-child(3) {
   stroke-dasharray: 210.42px;
   stroke-dashoffset: 210.42px;
-  animation: line-anim 2s ease forwards 1.8s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.8s;
 }
 #hello-outline path:nth-child(4) {
   stroke-dasharray: 210.42px;
   stroke-dashoffset: 210.42px;
-  animation: line-anim 2s ease forwards 1.8s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.8s;
 }
 #hello-outline path:nth-child(5) {
   stroke-dasharray: 276.76px;
   stroke-dashoffset: 276.76px;
-  animation: line-anim 2s ease forwards 1.9s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.9s;
 }
 #hello-outline path:nth-child(6) {
   stroke-dasharray: 282.52px;
   stroke-dashoffset: 282.52px;
-  animation: line-anim 2s ease forwards 1.7s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.7s;
 }
 #hello-outline path:nth-child(7) {
   stroke-dasharray: 350.4px;
   stroke-dashoffset: 350.4px;
-  animation: line-anim 2s ease forwards 1.7s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.7s;
 }
 #hello-outline path:nth-child(8) {
   stroke-dasharray: 333.87px;
   stroke-dashoffset: 333.87px;
-  animation: line-anim 2s ease forwards 1.8s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.8s;
 }
 #hello-outline path:nth-child(9) {
   stroke-dasharray: 197.3px;
   stroke-dashoffset: 197.3px;
-  animation: line-anim 2s ease forwards 1.8s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.8s;
 }
 #hello-outline path:nth-child(10) {
   stroke-dasharray: 333.87px;
   stroke-dashoffset: 333.87px;
-  animation: line-anim 2s ease forwards 1.9s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.9s;
 }
 #hello-outline path:nth-child(11) {
   stroke-dasharray: 63.55px;
   stroke-dashoffset: 63.55px;
-  animation: line-anim 2s ease forwards 1.9s;
+  animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 1.9s;
 }
 
 @keyframes line-anim {

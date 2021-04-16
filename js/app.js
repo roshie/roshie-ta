@@ -20,11 +20,13 @@ window.onload = function() {
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
-    duration: 500,
+    duration: 900,
     triggerHook: 0,
     reverse: true,
     offset: 0.1,
-}).addIndicators()
+}).addIndicators({
+    colorEnd: "#ffffff",
+})
 .setPin("#intro", {pushFollowers: false})
 .addTo(controller);
 
@@ -32,7 +34,7 @@ const sliderScene = new ScrollMagic.Scene({
     duration: 100,
     triggerHook: 0,
     reverse: true,
-    offset: 20,
+    offset: 50,
 })
 .on('enter', function (e) {
     if (e.scrollDirection == "FORWARD"){
@@ -54,7 +56,9 @@ const sliderScene = new ScrollMagic.Scene({
         document.getElementById('up-arrow').classList.add('slide');
     }
 })
-.addIndicators()
+.addIndicators({
+    colorEnd: "#ffffff",
+})
 .addTo(controller);
 
 
