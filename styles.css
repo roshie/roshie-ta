@@ -56,8 +56,12 @@ canvas {
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-#menu-content.icon {
+.menuicon {
   padding: 0.2em;
+}
+
+.active {
+  color: #cc005f !important;
 }
 .icon {
   /*social-media*/

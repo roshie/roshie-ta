@@ -32,7 +32,7 @@ const holdStars = new ScrollMagic.Scene({
 .addTo(controller);
 
 const sliderScene = new ScrollMagic.Scene({
-    duration: 100,
+    duration: 70,
     triggerHook: 0,
     reverse: true,
     offset: 50,
@@ -62,7 +62,7 @@ const sliderScene = new ScrollMagic.Scene({
 })
 .addTo(controller);
 
-
+// collapsible menu
 document.getElementById('menu-icon').addEventListener("click", function () {
     document.getElementById('nav-icon3').classList.toggle('open');
     this.classList.toggle("active");
@@ -74,3 +74,43 @@ document.getElementById('menu-icon').addEventListener("click", function () {
       console.log(content.scrollHeight);
     } 
 });
+
+//menu highlight
+function clearActive() {
+    document.getElementById('intro-icon').classList.remove('active');
+    document.getElementById('about-icon').classList.remove('active');
+    document.getElementById('portfolio-icon').classList.remove('active');
+    document.getElementById('contact-icon').classList.remove('active');
+}
+document.getElementById('intro-icon-a').addEventListener('click',function(){
+    clearActive();
+    document.getElementById('intro-icon').classList.add('active');
+});
+document.getElementById('about-icon-a').addEventListener('click',function(){
+    clearActive();
+    document.getElementById('about-icon').classList.add('active');
+});
+document.getElementById('portfolio-icon-a').addEventListener('click',function(){
+    clearActive();
+    document.getElementById('portfolio-icon').classList.add('active');
+});
+document.getElementById('contact-icon-a').addEventListener('click',function(){
+    clearActive();
+    document.getElementById('contact-icon').classList.add('active');
+});
+
+// function onScroll(event){
+//     var scrollPos = $(document).scrollTop();
+//     $('#menu-center a').each(function () {
+//         var currLink = $(this);
+//         var refElement = $(currLink.attr("href"));
+//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+//             $('#menu-center ul li a').removeClass("active");
+//             currLink.addClass("active");
+//         }
+//         else{
+//             currLink.removeClass("active");
+//         }
+//     });
+// }
+
