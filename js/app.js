@@ -1,4 +1,8 @@
 window.onload = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     setTimeout(function (){
         document.getElementById('loader').classList.add('slide');
         document.getElementById('slider').classList.add('backward');
@@ -29,13 +33,23 @@ const holdStars = new ScrollMagic.Scene({
     colorEnd: "#ffffff",
 })
 .setPin("#intro", {pushFollowers: false})
+.on('enter', function (e) {
+    if(e.scrollDirection == "REVERSE") {
+        document.getElementById('slider').classList.remove('fix');
+    }
+})
+.on('leave', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+        document.getElementById('slider').classList.add('fix');
+    }
+})
 .addTo(controller);
 
 const sliderScene = new ScrollMagic.Scene({
-    duration: 70,
+    duration: 50,
     triggerHook: 0,
     reverse: true,
-    offset: 50,
+    offset: 30,
 })
 .on('enter', function (e) {
     if (e.scrollDirection == "FORWARD"){

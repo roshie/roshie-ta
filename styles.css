@@ -9,7 +9,7 @@ body {
   scroll-behavior: smooth;
 }
 canvas {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -75,7 +75,7 @@ canvas {
 }
 #hero {
   margin: 0;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -93,14 +93,7 @@ canvas {
 #text-box.slide {
   transform: translate(-200%, 0%);
 }
-/* .heading {
-  text-align: end;
-  font-family: raleway;
-  font-size: 100px;
-  font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 5px black;
-} */
+
 #sub-heading {
   text-align: center;
   color: white;
@@ -167,15 +160,8 @@ canvas {
   top: 0%;
   overflow: hidden;
 }
-#intro-2 {
-  position: absolute;
-  width: 80vh;
-  top: 25%;
-  bottom: 50%;
-  right: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+#slider.fix {
+  position: fixed;
 }
 
 @media only screen and (min-width: 769px) {
@@ -242,8 +228,6 @@ canvas {
 }
 
 #about {
-  /* padding-bottom: 100vh; */
-  height: 100vh;
 }
 
 /* loader css codes */
@@ -472,3 +456,31 @@ canvas {
 }
 
 /* Icon 4 */
+
+/* tooltip */
+
+/* Right */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* end of tooltip */
