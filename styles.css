@@ -18,7 +18,7 @@ canvas {
   background-color: #0000002d;
   border: 1px solid #ffffff1c;
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
 }
 #loader {
   position: absolute;
@@ -171,6 +171,11 @@ canvas {
 }
 #profile-img {
   text-align: center;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.8s;
+}
+#profile-img.slide {
+  opacity: 1;
 }
 
 #about {
@@ -178,23 +183,43 @@ canvas {
   width: 80vw;
   position: fixed;
   top: 50%;
-  margin-top: -40vh;
+  margin-top: -35vh;
   margin-left: -40vw;
 }
 
 #about-me {
+  opacity: 0;
   color: white;
   font-family: raleway;
   font-size: 40px;
   font-weight: bolder;
+  margin-bottom: 5vh;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.9s;
 }
+#about-me.slide {
+  opacity: 1;
+}
+
+#about-content-container {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.8s;
+}
+#about-content-container.slide {
+  opacity: 1;
+}
+
 #about-quote {
+  opacity: 0;
   margin-top: 2vh;
   text-align: center;
   color: white;
   font-family: raleway;
   font-size: 18px;
   font-style: italic;
+  transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.9s;
+}
+#about-quote.slide {
+  opacity: 1;
 }
 .quote {
   color: #ffffff9f;
@@ -207,7 +232,6 @@ canvas {
   color: white;
   font-family: raleway;
   font-weight: bold;
-  padding: 20px;
 }
 #about-subcontent {
   color: white;
@@ -234,6 +258,17 @@ canvas {
     width: 5% !important;
     transition: width 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
+  #slider.getintoleft {
+    width: 100% !important;
+    right: 90% !important;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+  #slider.getintoleftBackward {
+    right: 0% !important;
+    width: 90% !important;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+
   #social-media {
     position: absolute;
     display: flex;
@@ -268,7 +303,7 @@ canvas {
   }
 }
 
-@media only screen and (max-width: 1042px) {
+@media only screen and (max-width: 1068px) {
   #about-subcontent {
     font-size: 15px;
   }
@@ -298,6 +333,11 @@ canvas {
     width: 0% !important;
     transition: width 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
+  #slider.getintoleft {
+    width: 0% !important;
+    right: 100% !important;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
   #social-media {
     display: none;
   }
@@ -310,8 +350,10 @@ canvas {
   #about-quote {
     font-size: 14px;
   }
-  #about-me {
+  #about-me-container {
     text-align: center;
+  }
+  #about-me {
     font-size: 22px;
     margin-bottom: 2vh;
   }

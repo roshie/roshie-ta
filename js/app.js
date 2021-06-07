@@ -46,29 +46,35 @@ const holdStars = new ScrollMagic.Scene({
 .addTo(controller);
 
 const sliderScene = new ScrollMagic.Scene({
-    duration: 50,
+    duration: 200,
     triggerHook: 0,
     reverse: true,
     offset: 30,
 })
 .on('enter', function (e) {
     if (e.scrollDirection == "FORWARD"){
-        document.getElementById('slider').classList.remove('backward');
+        document.getElementById('slider').classList.remove('backward', 'getintoleftBackward', 'getintoleft');
         document.getElementById('slider').classList.add('forward');
         document.getElementById('text-box').classList.add('slide');
         document.getElementById('up-arrow').classList.remove('slide');
+        addRemoveAboutSlide(true);
     } else if(e.scrollDirection == "REVERSE") {
-        document.getElementById('slider').style.width = '90%';
+        document.getElementById('slider').classList.remove('getintoleft');
+        document.getElementById('slider').classList.add('getintoleftBackward');
+        addRemoveAboutSlide(true);
     }
 })
 .on('leave', function (e) {
     if (e.scrollDirection == "FORWARD"){
-        document.getElementById('slider').style.width = '90%';
+        document.getElementById('slider').classList.remove('getintoleftBackward');
+        document.getElementById('slider').classList.add('getintoleft');
+        addRemoveAboutSlide(false);
     } else if(e.scrollDirection == "REVERSE") {
-        document.getElementById('slider').classList.remove('forward');
+        document.getElementById('slider').classList.remove('forward', 'getintoleftBackward', 'getintoleft');
         document.getElementById('slider').classList.add('backward');
         document.getElementById('text-box').classList.remove('slide');
         document.getElementById('up-arrow').classList.add('slide');
+        addRemoveAboutSlide(false);
     }
 })
 .addIndicators({
@@ -127,4 +133,18 @@ document.getElementById('contact-icon-a').addEventListener('click',function(){
 //         }
 //     });
 // }
+
+function addRemoveAboutSlide(add) {
+    if (add) {
+        document.getElementById('about-me').classList.add('slide');
+        document.getElementById('profile-img').classList.add('slide');
+        document.getElementById('about-quote').classList.add('slide');
+        document.getElementById('about-content-container').classList.add('slide');
+    } else {
+        document.getElementById('about-me').classList.remove('slide');
+        document.getElementById('profile-img').classList.remove('slide');
+        document.getElementById('about-quote').classList.remove('slide');
+        document.getElementById('about-content-container').classList.remove('slide');
+    }
+}
 

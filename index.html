@@ -58,10 +58,36 @@
         <div id="up-arrow">
           <div id="arrow-text">Scroll</div>
           <i id="arrow" class="fas fa-angle-double-down" style="color: white; font-size: 15px;"></i>
-        </div>
-        
-        
+        </div>      
       </section>
+      
+      <section id="about">
+        <div id="about-me-container" class="row">
+          <span id="about-me">ABOUT ME</span> 
+        </div> 
+        <div id="profile-img-container" class="col-12 col-sm-6">
+          <div style="text-align: center;"><img id="profile-img" src="Assets/profile-img.png" alt="Image"></div><br>
+          <div id="about-quote">
+            <i class="fas fa-quote-left quote"></i>Coffee is a language in itself.
+            <i class="fas fa-quote-right quote"></i> <br> - Jackie Chan
+          </div>
+        </div>
+        <div id="about-content-container" class="col-12 col-sm-4 card">
+          <div id="about-content">
+            Budding engineer. Minimalist. Fueled by coffee.
+          </div>
+          <br><br>
+          <div id="about-subcontent">
+            I’m currently pursuing my Bachelor of Technology in Information Technology at Loyola - ICAM College of Engineering and Technology.
+          </div>
+        </div>
+      </section>
+      <section id="contact" style="height: 100vh; position: relative;">
+          <div class="col-12 col-sm-6">Hey</div>
+          <div class="col-12 col-sm-6">Hola</div>
+      </section>
+
+      <!-- widgets -->
       <div id="menu-bar">
         <div id="menu-icon" class="collapsible">
           <div id="nav-icon3">
@@ -72,49 +98,20 @@
           </div>
         </div>
         <div id="menu-content">
-          <div class="tooltip">
-            <a href="#content" id="intro-icon-a"><i id="intro-icon" class="fas fa-home menuicon active" style="color: white; font-size: 30px;"></i></a>
-            <span class="tooltiptext" style="margin-left:5px;">Tooltip text</span>
-          </div>
-          <div class="tooltip">
-            <a href="#intro-2" id="about-icon-a"><i id="about-icon" class="far fa-address-card menuicon" style="color: white; font-size: 30px;"></i></a>
-            <span class="tooltiptext" style="margin-left:5px;">Tooltip text</span>
-          </div>
-          <div class="tooltip">
-            <a href="" id="portfolio-icon-a"><i id="portfolio-icon" class="fas fa-border-all menuicon" style="color: white; font-size: 35px;"></i></a>
-            <span class="tooltiptext" style="margin-left:5px;">Tooltip text</span>
-          </div>
-          <div class="tooltip">
-            <a href="" id="contact-icon-a"><i id="contact-icon" class="fas fa-at menuicon" style="color: white; font-size: 35px;"></i></a>
-            <span class="tooltiptext" style="margin-left:5px;">Tooltip text</span>
-          </div>
+          <a onclick="window.scrollTo(0,0)" id="intro-icon-a"><i id="intro-icon" class="fas fa-home menuicon active" style="color: white; font-size: 30px;"></i></a>
+          <a onclick="window.scrollTo(0,40)" id="about-icon-a"><i id="about-icon" class="far fa-address-card menuicon" style="color: white; font-size: 30px;"></i></a>
+          <a onclick="window.scrollTo(0,240)" id="portfolio-icon-a"><i id="portfolio-icon" class="fas fa-border-all menuicon" style="color: white; font-size: 35px;"></i></a>
+          <a onclick="window.scrollTo(0,0)" id="contact-icon-a"><i id="contact-icon" class="fas fa-at menuicon" style="color: white; font-size: 35px;"></i></a>
+         </div>
         </div>
       </div>
       <div id="social-media">
         <a href="#hero"><i class="fab fa-facebook-square icon" style="color: white; font-size: 20px;"></i></a>
         <a href="#about"><i class="fab fa-instagram icon" style="color: white; font-size: 20px;"></i></a>
         <a href="#"><i class="fab fa-linkedin-in icon" style="color: white; font-size: 20px;"></i></a>
-        <a href="#"><i class="fab fa-github icon" style="color: white; font-size: 20px;"></i></a>
+        <a href="https://github.com/roshie"><i class="fab fa-github icon" style="color: white; font-size: 20px;"></i></a>
       </div>
-      
-      <section id="about">
-        <div id="about-me">ABOUT ME</div> 
-          <div class="col-12 col-sm-6">
-            <div style="text-align: center;"><img id="profile-img" src="Assets/profile-img.png" alt="Image"></div>
-            <div id="about-quote"><i class="fas fa-quote-left quote"></i>Coffee is a language in itself.<i class="fas fa-quote-right quote"></i> <br> - Jackie Chan</div>
-          </div>
-          <div id="about-content" class="col-12 col-sm-4">
-            Budding engineer. Minimalist. Fueled by coffee.<br><br>
-            <div id="about-subcontent">
-              I’m currently pursuing my Bachelor of Technology in Information Technology at Loyola - ICAM College of Engineering and Technology.
-            </div>
-            <!-- <div id="about-tech-stack"></div> -->
-          </div>
-      </section>
-      <section id="contact" style="height: 100vh; position: relative;">
-          <div class="col-12 col-sm-6">Hey</div>
-          <div class="col-12 col-sm-6">Hola</div>
-      </section>
+      <!-- end of widgets -->
 
       <script src="js/three.min.js"></script>
       <script src="js/star.js"></script>
@@ -123,6 +120,7 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js" integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg==" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="Assets/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
 </html>
