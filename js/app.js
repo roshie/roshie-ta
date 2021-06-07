@@ -32,7 +32,7 @@ const holdStars = new ScrollMagic.Scene({
 }).addIndicators({
     colorEnd: "#ffffff",
 })
-.setPin("#intro", {pushFollowers: false})
+.setPin("#content", {pushFollowers: false})
 .on('enter', function (e) {
     if(e.scrollDirection == "REVERSE") {
         document.getElementById('slider').classList.remove('fix');

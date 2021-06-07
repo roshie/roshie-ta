@@ -14,6 +14,12 @@ canvas {
   left: 0;
   z-index: -1;
 }
+.card {
+  background-color: #0000002d;
+  border: 1px solid #ffffff1c;
+  border-radius: 20px;
+  padding: 20px;
+}
 #loader {
   position: absolute;
   top: 50%;
@@ -164,6 +170,52 @@ canvas {
   position: fixed;
 }
 
+#about {
+  height: 80vh;
+  width: 80vw;
+  position: fixed;
+  top: 50%;
+  margin-top: -35vh;
+  margin-left: -40vw;
+}
+#profile-img {
+  text-align: center;
+}
+
+#about-me {
+  color: white;
+  font-family: raleway;
+  font-size: 40px;
+  font-weight: bold;
+}
+#about-quote {
+  margin-top: 2vh;
+  text-align: center;
+  color: white;
+  font-family: raleway;
+  font-size: 18px;
+  font-style: italic;
+}
+.quote {
+  color: #ffffff9f;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-size: 14px;
+}
+
+#about-content {
+  color: white;
+  font-family: raleway;
+  font-size: 20px;
+  font-weight: bold;
+}
+#about-subcontent {
+  color: white;
+  font-family: raleway;
+  font-size: 14px;
+  font-weight: 0;
+}
+
 @media only screen and (min-width: 769px) {
   #slider {
     background-color: #cc005fd5;
@@ -198,6 +250,19 @@ canvas {
     top: 50%;
     position: fixed !important;
   }
+  #about {
+    left: 60%;
+  }
+  #profile-img {
+    width: 25vw;
+  }
+  #about-me {
+    text-align: left;
+    margin-bottom: 5vh;
+  }
+  #about-content {
+    text-align: left;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -225,9 +290,19 @@ canvas {
   #social-media {
     display: none;
   }
-}
-
-#about {
+  #about {
+    left: 50%;
+  }
+  #profile-img {
+    width: 70vw;
+  }
+  #about-me {
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+  #about-content {
+    text-align: center;
+  }
 }
 
 /* loader css codes */
