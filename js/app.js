@@ -1,3 +1,8 @@
+// Intro - 0
+// About - 40
+// Resume - 240
+// Contact - 440
+
 window.onload = function() {
     window.scrollTo({
         top: 0,
@@ -82,6 +87,32 @@ const sliderScene = new ScrollMagic.Scene({
 })
 .addTo(controller);
 
+const educationSection = new ScrollMagic.Scene({
+    duration: 200,
+    triggerHook: 0,
+    reverse: true,
+    offset: 270,
+})
+.on('enter', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+        addRemoveEducationSlide(true);
+    } else if(e.scrollDirection == "REVERSE") {
+    }
+})
+.on('leave', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+    } else if(e.scrollDirection == "REVERSE") {
+        addRemoveEducationSlide(false);
+    }
+})
+.addIndicators({
+    colorEnd: "#ffffff",
+})
+.addTo(controller);
+
+
+
+
 // collapsible menu
 document.getElementById('menu-icon').addEventListener("click", function () {
     document.getElementById('nav-icon3').classList.toggle('open');
@@ -92,7 +123,7 @@ document.getElementById('menu-icon').addEventListener("click", function () {
     } else {
       content.style.maxHeight = '75%';
       console.log(content.scrollHeight);
-    } 
+    }
 });
 
 //menu highlight
@@ -148,3 +179,10 @@ function addRemoveAboutSlide(add) {
     }
 }
 
+function addRemoveEducationSlide(add) {
+    if (add) {
+        document.getElementById('education-title').classList.add('slide');
+    } else {
+        document.getElementById('education-title').classList.remove('slide');
+    }
+}

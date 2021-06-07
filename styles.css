@@ -239,6 +239,37 @@ canvas {
   font-size: 20px;
   font-weight: 0;
 }
+
+#education {
+  height: 80vh;
+  width: 80vw;
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin-top: -35vh;
+  margin-left: -40vw;
+}
+#education-title {
+  color: white;
+  position: absolute;
+  font-family: raleway;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 5vh;
+  transform: translateX(-100%);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 1s;
+}
+.edu-subheading {
+  color: white;
+  position: absolute;
+  font-family: raleway;
+  font-size: 25px;
+  top: 50%;
+}
+#education-title.slide {
+  transform: translateX(0%);
+}
 @media only screen and (min-width: 769px) {
   #slider {
     background-color: #cc005fd5;
@@ -260,7 +291,7 @@ canvas {
   }
   #slider.getintoleft {
     width: 100% !important;
-    right: 90% !important;
+    right: 95% !important;
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #slider.getintoleftBackward {
@@ -338,6 +369,11 @@ canvas {
     right: 100% !important;
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
+  #slider.getintoleftBackward {
+    right: 0% !important;
+    width: 100% !important;
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
   #social-media {
     display: none;
   }
@@ -366,6 +402,9 @@ canvas {
     margin-top: 1vh;
     text-align: center;
     font-size: 18px;
+  }
+  #education {
+    margin-top: -40vh;
   }
 }
 
@@ -623,3 +662,99 @@ canvas {
   visibility: visible;
 }
 /* end of tooltip */
+
+.borderBox {
+  width: 25vw;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0%;
+}
+
+.borderBox::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.borderBox:hover::before {
+  animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  50% {
+    width: 100%;
+    height: 0;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.borderBox::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.borderBox:hover::after {
+  animation: animates 1s linear forwards;
+}
+
+@keyframes animates {
+  0% {
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: rgb(255, 255, 255);
+  }
+
+  50% {
+    width: 0;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+  }
+}
