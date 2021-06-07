@@ -12,7 +12,7 @@ window.onload = function() {
         document.getElementById('social-media').classList.add('slide');
         document.getElementById('up-arrow').classList.add('slide');
         document.getElementById('sub-heading').classList.add('slide');
-    },2000)
+    },4000)
     document.body.style.position = 'static';
     init();
 }
