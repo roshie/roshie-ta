@@ -234,8 +234,12 @@ function addRemoveEducationSlide(add) {
 function addRemovePortfolioSlide (add) {
     if (add) {
         document.getElementById('portfolio-title').classList.add('slide');
+        $('.portfolio-box').each(function() { this.classList.add('slide'); });
+        $('.content').each(function() { this.classList.add('slide'); });
     } else {
         document.getElementById('portfolio-title').classList.remove('slide');
+        $('.portfolio-box').each(function() { this.classList.remove('slide'); });
+        $('.content').each(function() { this.classList.remove('slide'); });
     }
 }
 // Typewrite
