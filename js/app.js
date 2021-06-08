@@ -40,7 +40,7 @@ window.onload = function() {
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
-    duration: 900,
+    duration: 1500,
     triggerHook: 0,
     reverse: true,
     offset: 0.1,
@@ -61,7 +61,7 @@ const holdStars = new ScrollMagic.Scene({
 .addTo(controller);
 
 const sliderScene = new ScrollMagic.Scene({
-    duration: 200,
+    duration: 500,
     triggerHook: 0,
     reverse: true,
     offset: 30,
@@ -85,7 +85,7 @@ const sliderScene = new ScrollMagic.Scene({
         document.getElementById('slider').classList.add('getintoleft');
         addRemoveAboutSlide(false);
     } else if(e.scrollDirection == "REVERSE") {
-        document.getElementById('slider').classList.remove('forward', 'getintoleftBackward', 'getintoleft');
+        document.getElementById('slider').classList.remove('forward', 'getintoleftBackward', 'getintoleft','eduLeftReverse','eduLeft');
         document.getElementById('slider').classList.add('backward');
         document.getElementById('text-box').classList.remove('slide');
         document.getElementById('up-arrow').classList.add('slide');
@@ -98,27 +98,58 @@ const sliderScene = new ScrollMagic.Scene({
 .addTo(controller);
 
 const educationSection = new ScrollMagic.Scene({
-    duration: 200,
+    duration: 300,
     triggerHook: 0,
     reverse: true,
-    offset: 270,
+    offset: 570,
 })
 .on('enter', function (e) {
     if (e.scrollDirection == "FORWARD"){
         addRemoveEducationSlide(true);
     } else if(e.scrollDirection == "REVERSE") {
-        document.getElementById('slider').classList.remove('eduLeft');
+        document.getElementById('slider').classList.remove('eduLeft','forward', 'backward','getintoleftBackward', 'getintoleft');
         document.getElementById('slider').classList.add('eduLeftReverse');
         addRemoveEducationSlide(true);
     }
 })
 .on('leave', function (e) {
     if (e.scrollDirection == "FORWARD"){
-        document.getElementById('slider').classList.remove('eduLeftReverse');
+        document.getElementById('slider').classList.remove('eduLeftReverse','eduLeft','forward', 'backward','getintoleftBackward', 'getintoleft');
         document.getElementById('slider').classList.add('eduLeft');
         addRemoveEducationSlide(false);
     } else if(e.scrollDirection == "REVERSE") {
         addRemoveEducationSlide(false);
+        document.getElementById('slider').classList.remove('eduLeftReverse','eduLeft','getintoleftBackward', 'getintoleft');
+    }
+})
+.addIndicators({
+    colorEnd: "#ffffff",
+})
+.addTo(controller);
+
+const portfolioSection = new ScrollMagic.Scene({
+    duration: 290,
+    triggerHook: 0,
+    reverse: true,
+    offset: 900,
+})
+.on('enter', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+        addRemovePortfolioSlide(true);
+    } else if(e.scrollDirection == "REVERSE") {
+        document.getElementById('slider').classList.remove('contactLeft');
+        document.getElementById('slider').classList.add('contactLeftReverse');
+        addRemovePortfolioSlide(true);
+    }
+})
+.on('leave', function (e) {
+    if (e.scrollDirection == "FORWARD"){
+        document.getElementById('slider').classList.remove('contactLeftReverse');
+        document.getElementById('slider').classList.add('contactLeft');
+        addRemovePortfolioSlide(false);
+    } else if(e.scrollDirection == "REVERSE") {
+        addRemovePortfolioSlide(false);
+        document.getElementById('slider').classList.remove('contactLeft','contactLeftReverse');
     }
 })
 .addIndicators({
@@ -200,7 +231,13 @@ function addRemoveEducationSlide(add) {
     }
 }
 
-
+function addRemovePortfolioSlide (add) {
+    if (add) {
+        document.getElementById('portfolio-title').classList.add('slide');
+    } else {
+        document.getElementById('portfolio-title').classList.remove('slide');
+    }
+}
 // Typewrite
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
