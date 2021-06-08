@@ -325,6 +325,15 @@ li {
     transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
 
+  #slider.eduLeft {
+    right: 90% !important;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 1.5s;
+  }
+  #slider.eduLeftReverse {
+    right: 10% !important;
+    transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+
   #social-media {
     position: absolute;
     display: flex;
@@ -386,10 +395,26 @@ li {
     opacity: 0;
   }
   #edu-timeline-wrapper {
-    top: 50vh;
+    top: 40vh;
     margin-top: -35vh;
     right: 10%;
     left: 10%;
+  }
+  #slider.getintoleft {
+    right: 10% !important;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+  #slider.getintoleftBackward {
+    right: 0% !important;
+    transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+  #slider.eduLeft {
+    right: 90% !important;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+  #slider.eduLeftReverse {
+    right: 10% !important;
+    transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -421,6 +446,14 @@ li {
   #slider.getintoleftBackward {
     right: 0% !important;
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+  #slider.eduLeft {
+    right: 100% !important;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+  }
+  #slider.eduLeftReverse {
+    right: 75% !important;
+    transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #social-media {
     display: none;

@@ -107,10 +107,16 @@ const educationSection = new ScrollMagic.Scene({
     if (e.scrollDirection == "FORWARD"){
         addRemoveEducationSlide(true);
     } else if(e.scrollDirection == "REVERSE") {
+        document.getElementById('slider').classList.remove('eduLeft');
+        document.getElementById('slider').classList.add('eduLeftReverse');
+        addRemoveEducationSlide(true);
     }
 })
 .on('leave', function (e) {
     if (e.scrollDirection == "FORWARD"){
+        document.getElementById('slider').classList.remove('eduLeftReverse');
+        document.getElementById('slider').classList.add('eduLeft');
+        addRemoveEducationSlide(false);
     } else if(e.scrollDirection == "REVERSE") {
         addRemoveEducationSlide(false);
     }
