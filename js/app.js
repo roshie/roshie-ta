@@ -1,6 +1,6 @@
 // Intro - 0
 // About - 40
-// Resume - 240
+// Education - 240
 // Contact - 440
 
 window.onload = function() {
@@ -30,18 +30,13 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
 }
 
 // save for later
-const hello = document.querySelectorAll("#title-small path");
-for (let i = 0; i<hello.length; i++){
-    console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
-}
+// const hello = document.querySelectorAll("#title-small path");
+// for (let i = 0; i<hello.length; i++){
+//     console.log(`Letter ${i} id ${hello[i].getTotalLength()}`); 
+// }
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
