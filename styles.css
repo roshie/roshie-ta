@@ -15,9 +15,6 @@ canvas {
   z-index: -1;
 }
 .card {
-  background-color: #0000002d;
-  border: 1px solid #ffffff1c;
-  border-radius: 20px;
   padding: 30px;
 }
 #loader {
@@ -210,7 +207,7 @@ canvas {
 
 #about-quote {
   opacity: 0;
-  margin-top: 2vh;
+  margin-top: 5vh;
   text-align: center;
   color: white;
   font-family: raleway;
@@ -232,6 +229,10 @@ canvas {
   color: white;
   font-family: raleway;
   font-weight: bold;
+}
+.typewrite {
+  text-decoration: none;
+  color: white;
 }
 #about-subcontent {
   color: white;
@@ -290,14 +291,12 @@ canvas {
     transition: width 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #slider.getintoleft {
-    width: 100% !important;
-    right: 95% !important;
-    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+    right: 10% !important;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #slider.getintoleftBackward {
     right: 0% !important;
-    width: 90% !important;
-    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
+    transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
 
   #social-media {
@@ -322,7 +321,7 @@ canvas {
     font-size: 20px;
   }
   #profile-img {
-    width: 20vw;
+    width: 40vh;
   }
   #about-me {
     text-align: left;
@@ -330,16 +329,23 @@ canvas {
   }
   #about-content {
     text-align: left;
-    font-size: 30px;
+    font-size: 40px;
+  }
+  #about-subcontent {
+    margin-top: 7vh;
   }
 }
 
-@media only screen and (max-width: 1068px) {
+@media only screen and (max-width: 1100px) {
   #about-subcontent {
-    font-size: 15px;
+    margin-top: 7vh;
+    font-size: 18px;
   }
   #profile-img {
     width: 30vw;
+  }
+  #about-content {
+    font-size: 30px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -365,13 +371,11 @@ canvas {
     transition: width 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #slider.getintoleft {
-    width: 0% !important;
-    right: 100% !important;
+    right: 75% !important;
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #slider.getintoleftBackward {
     right: 0% !important;
-    width: 100% !important;
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
   #social-media {
@@ -385,6 +389,7 @@ canvas {
   }
   #about-quote {
     font-size: 14px;
+    margin-top: 0;
   }
   #about-me-container {
     text-align: center;
@@ -396,10 +401,10 @@ canvas {
   #about-content {
     margin-top: 1vh;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
   }
   #about-subcontent {
-    margin-top: 1vh;
+    margin-top: 5vh;
     text-align: center;
     font-size: 18px;
   }
