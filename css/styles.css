@@ -310,6 +310,78 @@ li {
   margin-top: -35vh;
   margin-left: -40vw;
 }
+
+.portfolio-box {
+  padding: 20px;
+  margin: 10px;
+  width: 30vw;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-box::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+
+.portfolio-box.slide::before {
+  animation: border-top 1s linear forwards 1.7s;
+}
+.portfolio-box::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+
+.portfolio-box.slide:after {
+  animation: border-bottom 1s linear forwards 1.7s;
+}
+
+.content {
+  font-family: raleway;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-150%);
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+
+.content.slide {
+  transform: translateX(0%);
+  transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1) 1.5s;
+}
+.portfoliotitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+.portfolio-row {
+  display: flex;
+  flex-direction: row;
+}
+#portfolio-content {
+  position: absolute;
+  top: 20%;
+  margin-top: 0%;
+  left: 10%;
+  right: 10%;
+}
+
 @media only screen and (min-width: 769px) {
   #slider {
     background-color: #cc005fd5;
@@ -445,6 +517,9 @@ li {
     right: 90% !important;
     transition: all 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0.5s;
   }
+  .portfoliotitle {
+    font-size: 20px;
+  }
 }
 @media only screen and (max-width: 768px) {
   #slider {
@@ -532,5 +607,25 @@ li {
   }
   .circleicon {
     display: none;
+  }
+  .portfolio-row {
+    display: flex;
+    flex-direction: column;
+  }
+  #portfolio-content {
+    position: absolute;
+    top: 10%;
+    margin-top: 0%;
+    left: 5%;
+    right: 5%;
+  }
+  .portfolio-box {
+    width: 100%;
+  }
+  .portfoliotitle {
+    font-size: 16px;
+  }
+  #roshita-portfolio {
+    opacity: 0;
   }
 }
