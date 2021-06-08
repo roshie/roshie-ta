@@ -177,14 +177,20 @@ function addRemoveAboutSlide(add) {
 function addRemoveEducationSlide(add) {
     if (add) {
         document.getElementById('education-title').classList.add('slide');
-        document.getElementById('edu-box1').classList.add('onenter');
-        document.getElementById('edu-box2').classList.add('onenter');
-        document.getElementById('edu-box3').classList.add('onenter');
+        for ( i=1; i<4; i++ ) {
+            document.getElementById('edu-box'+i).classList.add('onenter');
+            document.getElementById('circleicon'+i).style = 'opacity: 1;';
+        }
+        $('.edu-left').each(function() { this.classList.add('slide'); });
+        $('.edu-right').each(function() { this.classList.add('slide'); });
     } else {
         document.getElementById('education-title').classList.remove('slide');
-        document.getElementById('edu-box1').classList.remove('onenter');
-        document.getElementById('edu-box2').classList.remove('onenter');
-        document.getElementById('edu-box3').classList.remove('onenter');
+        for ( i=1; i<4; i++ ) {
+            document.getElementById('edu-box'+i).classList.remove('onenter');
+            document.getElementById('circleicon'+i).style = 'opacity: 0;';
+        }
+        $('.edu-left').each(function() { this.classList.remove('slide'); });
+        $('.edu-right').each(function() { this.classList.remove('slide'); });
     }
 }
 

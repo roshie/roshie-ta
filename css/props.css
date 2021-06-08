@@ -297,3 +297,100 @@
   }
 }
 /* end of up arrow   */
+
+/* edu-lines */
+#edu-box1 {
+  text-align: left;
+}
+#edu-box1::before {
+  content: "";
+  height: 0%;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.1s ease 0.2s;
+}
+#edu-box1.onenter::before {
+  transition: height 0.1s ease 1s;
+  height: 100%;
+}
+#edu-box1::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.1s ease 0.2s;
+}
+#edu-box1.onenter::after {
+  transition: width 0.2s ease 1.1s;
+  width: 100%;
+}
+#edu-box2 {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+#edu-box2::before {
+  content: "";
+  height: 0%;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.1s ease 0.2s;
+}
+#edu-box2.onenter::before {
+  transition: height 0.1s ease 1.3s;
+  height: 100%;
+}
+#edu-box2::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0px;
+  transition: all 0.1s ease 0.2s;
+  right: 0;
+}
+#edu-box2.onenter::after {
+  transition: width 0.2s ease 1.4s;
+  width: 100%;
+}
+#edu-box3 {
+  text-align: left;
+}
+#edu-box3::before {
+  content: "";
+  height: 0%;
+  width: 1px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.1s ease 0.2s;
+  top: 0;
+}
+#edu-box3.onenter::before {
+  transition: height 0.1s ease 1.6s;
+  height: 100%;
+}
+#edu-box3::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.1s ease 0.2s;
+  bottom: 0px;
+  left: 0;
+}
+#edu-box3.onenter::after {
+  transition: width 0.2s ease 1.7s;
+  width: 100%;
+}
+/* end of edu lines */
