@@ -177,8 +177,14 @@ function addRemoveAboutSlide(add) {
 function addRemoveEducationSlide(add) {
     if (add) {
         document.getElementById('education-title').classList.add('slide');
+        document.getElementById('edu-box1').classList.add('onenter');
+        document.getElementById('edu-box2').classList.add('onenter');
+        document.getElementById('edu-box3').classList.add('onenter');
     } else {
         document.getElementById('education-title').classList.remove('slide');
+        document.getElementById('edu-box1').classList.remove('onenter');
+        document.getElementById('edu-box2').classList.remove('onenter');
+        document.getElementById('edu-box3').classList.remove('onenter');
     }
 }
 
@@ -224,7 +230,3 @@ TxtType.prototype.tick = function() {
     that.tick();
     }, delta);
 };
-
-// window.onload = function() {
-    
-// };
