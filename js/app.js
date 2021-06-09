@@ -119,7 +119,7 @@ const educationSection = new ScrollMagic.Scene({
         addRemoveEducationSlide(false);
     } else if(e.scrollDirection == "REVERSE") {
         addRemoveEducationSlide(false);
-        document.getElementById('slider').classList.remove('eduLeftReverse','eduLeft','getintoleftBackward', 'getintoleft');
+        document.getElementById('slider').classList.remove('eduLeftReverse','eduLeft','getintoleftBackward');
     }
 })
 .addIndicators({

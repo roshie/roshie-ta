@@ -317,6 +317,27 @@ li {
   width: 30vw;
   overflow: hidden;
   position: relative;
+  border-radius: 30px;
+  transition: all 0.2s ease 0.3s;
+}
+.portfolio-box:hover.slide {
+  background-color: #ffffff2f;
+  transform: scale(1.05);
+}
+.portfolio-tags {
+  margin-top: 10px;
+  transform: translateY(500%);
+  transition: all 0.2s ease 0.3s;
+}
+.portfolio-box:hover.slide > .portfolio-tags {
+  transform: translateY(0%);
+}
+.tag {
+  background-color: rgba(255, 255, 255, 0.473);
+  color: white;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 3px;
 }
 .portfolio-box::before {
   content: "";
@@ -627,5 +648,8 @@ li {
   }
   #roshita-portfolio {
     opacity: 0;
+  }
+  .portfolio-tags {
+    display: none;
   }
 }
