@@ -406,7 +406,7 @@ li {
   height: 55vh;
   width: 80vw;
   position: fixed;
-  /* overflow: hidden; */
+  transition: opacity 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
   top: 50%;
   left: 50%;
   margin-top: -30vh;

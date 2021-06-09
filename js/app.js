@@ -143,9 +143,7 @@ const portfolioSection = new ScrollMagic.Scene({
         addRemovePortfolioSlide(true);
         document.getElementById('contact-img').classList.remove('slide');
         document.getElementById('contact-content').classList.remove('slide');
-        // document.getElementById('contact').style.display = "none";
-        // document.getElementById('contact').style.transition = "display 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;";
-        // document.getElementById('contact').style.opacity = 0;
+        document.getElementById('mailid').disabled = true;
     }
 })
 .on('leave', function (e) {
@@ -156,9 +154,7 @@ const portfolioSection = new ScrollMagic.Scene({
         document.getElementById('social-media').style.opacity = 0;
         document.getElementById('contact-img').classList.add('slide');
         document.getElementById('contact-content').classList.add('slide');
-        // document.getElementById('contact').style.display = "block";
-        // document.getElementById('contact').style.transition = "display 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;";
-        // document.getElementById('contact').style.opacity = 1;
+        document.getElementById('mailid').disabled = false;
     } else if(e.scrollDirection == "REVERSE") {
         addRemovePortfolioSlide(false);
         document.getElementById('slider').classList.remove('contactLeft','contactLeftReverse');
