@@ -139,7 +139,10 @@ const portfolioSection = new ScrollMagic.Scene({
     } else if(e.scrollDirection == "REVERSE") {
         document.getElementById('slider').classList.remove('contactLeft');
         document.getElementById('slider').classList.add('contactLeftReverse');
+        document.getElementById('social-media').style.opacity = 1;
         addRemovePortfolioSlide(true);
+        document.getElementById('contact-img').classList.remove('slide');
+        document.getElementById('contact-content').classList.remove('slide');
     }
 })
 .on('leave', function (e) {
@@ -147,6 +150,10 @@ const portfolioSection = new ScrollMagic.Scene({
         document.getElementById('slider').classList.remove('contactLeftReverse');
         document.getElementById('slider').classList.add('contactLeft');
         addRemovePortfolioSlide(false);
+        document.getElementById('social-media').style.opacity = 0;
+        document.getElementById('contact-img').classList.add('slide');
+        document.getElementById('contact-content').classList.add('slide');
+
     } else if(e.scrollDirection == "REVERSE") {
         addRemovePortfolioSlide(false);
         document.getElementById('slider').classList.remove('contactLeft','contactLeftReverse');
