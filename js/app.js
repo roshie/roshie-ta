@@ -40,7 +40,7 @@ window.onload = function() {
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
-    duration: 4000,
+    duration: 4300,
     triggerHook: 0,
     reverse: true,
     offset: 0.1,
