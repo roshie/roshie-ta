@@ -197,6 +197,10 @@ document.getElementById('about-icon-a').addEventListener('click',function(){
     clearActive();
     document.getElementById('about-icon').classList.add('active');
 });
+document.getElementById('education-icon-a').addEventListener('click',function(){
+    clearActive();
+    document.getElementById('education-icon').classList.add('active');
+});
 document.getElementById('portfolio-icon-a').addEventListener('click',function(){
     clearActive();
     document.getElementById('portfolio-icon').classList.add('active');
