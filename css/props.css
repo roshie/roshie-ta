@@ -108,56 +108,59 @@
     fill: white;
   }
 }
-
 #title-big {
+  display: none;
+}
+#title-big.slide {
+  display: block;
   animation: fill-title 1.5s ease forwards 4s;
 }
-#title-big path:nth-child(1) {
+#title-big.slide path:nth-child(1) {
   stroke-dasharray: 169.6px;
   stroke-dashoffset: 169.6px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.2s;
 }
-#title-big path:nth-child(2) {
+#title-big.slide path:nth-child(2) {
   stroke-dasharray: 77.7px;
   stroke-dashoffset: 77.7px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.3s;
 }
-#title-big path:nth-child(3) {
+#title-big.slide path:nth-child(3) {
   stroke-dasharray: 431.8px;
   stroke-dashoffset: 431.8px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.3s;
 }
-#title-big path:nth-child(4) {
+#title-big.slide path:nth-child(4) {
   stroke-dasharray: 379.9px;
   stroke-dashoffset: 379.9px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.3s;
 }
-#title-big path:nth-child(5) {
+#title-big.slide path:nth-child(5) {
   stroke-dasharray: 266px;
   stroke-dashoffset: 266px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.4s;
 }
-#title-big path:nth-child(6) {
+#title-big.slide path:nth-child(6) {
   stroke-dasharray: 265.5px;
   stroke-dashoffset: 265.5px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.4s;
 }
-#title-big path:nth-child(7) {
+#title-big.slide path:nth-child(7) {
   stroke-dasharray: 324.08px;
   stroke-dashoffset: 324.08px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.4s;
 }
-#title-big path:nth-child(8) {
+#title-big.slide path:nth-child(8) {
   stroke-dasharray: 185px;
   stroke-dashoffset: 185px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.5s;
 }
-#title-big path:nth-child(9) {
+#title-big.slide path:nth-child(9) {
   stroke-dasharray: 222.86px;
   stroke-dashoffset: 222.86px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.5s;
 }
-#title-big path:nth-child(10) {
+#title-big.slide path:nth-child(10) {
   stroke-dasharray: 318.22px;
   stroke-dashoffset: 318.22px;
   animation: line-anim 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards 2.5s;
