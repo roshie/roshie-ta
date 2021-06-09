@@ -44,9 +44,10 @@ const holdStars = new ScrollMagic.Scene({
     triggerHook: 0,
     reverse: true,
     offset: 0.1,
-}).addIndicators({
-    colorEnd: "#ffffff",
 })
+// .addIndicators({
+//     colorEnd: "#ffffff",
+// })
 .setPin("#content", {pushFollowers: false})
 .on('enter', function (e) {
     if(e.scrollDirection == "REVERSE") {
@@ -92,9 +93,9 @@ const sliderScene = new ScrollMagic.Scene({
         addRemoveAboutSlide(false);
     }
 })
-.addIndicators({
-    colorEnd: "#ffffff",
-})
+// .addIndicators({
+//     colorEnd: "#ffffff",
+// })
 .addTo(controller);
 
 const educationSection = new ScrollMagic.Scene({
@@ -122,9 +123,9 @@ const educationSection = new ScrollMagic.Scene({
         document.getElementById('slider').classList.remove('eduLeftReverse','eduLeft','getintoleftBackward');
     }
 })
-.addIndicators({
-    colorEnd: "#ffffff",
-})
+// .addIndicators({
+//     colorEnd: "#ffffff",
+// })
 .addTo(controller);
 
 const portfolioSection = new ScrollMagic.Scene({
@@ -160,9 +161,9 @@ const portfolioSection = new ScrollMagic.Scene({
         document.getElementById('slider').classList.remove('contactLeft','contactLeftReverse');
     }
 })
-.addIndicators({
-    colorEnd: "#ffffff",
-})
+// .addIndicators({
+//     colorEnd: "#ffffff",
+// })
 .addTo(controller);
 
 
