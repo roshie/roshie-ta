@@ -1,8 +1,3 @@
-// Intro - 0
-// About - 40
-// Education - 240
-// Contact - 440
-
 window.onload = function() {
     window.scrollTo({
         top: 0,
@@ -12,6 +7,7 @@ window.onload = function() {
         document.getElementById('loader').classList.add('slide');
         document.getElementById('slider').classList.add('backward');
     }, 500);
+    document.getElementById('title-big').classList.add('slide');
     setTimeout(function(){
         document.getElementById('menu-bar').classList.add('slide');
         document.getElementById('social-media').classList.add('slide');
@@ -43,11 +39,13 @@ const holdStars = new ScrollMagic.Scene({
     duration: 4300,
     triggerHook: 0,
     reverse: true,
-    offset: 0.1,
+    offset: 0,
 })
-// .addIndicators({
-//     colorEnd: "#ffffff",
-// })
+.addIndicators({
+    colorStart:  "#ffffff00",
+    colorEnd: "#ffffff00",
+    colorTrigger:"#ffffff00",
+})
 .setPin("#content", {pushFollowers: false})
 .on('enter', function (e) {
     if(e.scrollDirection == "REVERSE") {
@@ -93,9 +91,11 @@ const sliderScene = new ScrollMagic.Scene({
         addRemoveAboutSlide(false);
     }
 })
-// .addIndicators({
-//     colorEnd: "#ffffff",
-// })
+.addIndicators({
+    colorStart:  "#ffffff00",
+    colorEnd: "#ffffff00",
+    colorTrigger:"#ffffff00",
+})
 .addTo(controller);
 
 const educationSection = new ScrollMagic.Scene({
@@ -123,9 +123,11 @@ const educationSection = new ScrollMagic.Scene({
         document.getElementById('slider').classList.remove('eduLeftReverse','eduLeft','getintoleftBackward');
     }
 })
-// .addIndicators({
-//     colorEnd: "#ffffff",
-// })
+.addIndicators({
+    colorStart:  "#ffffff00",
+    colorEnd: "#ffffff00",
+    colorTrigger:"#ffffff00",
+})
 .addTo(controller);
 
 const portfolioSection = new ScrollMagic.Scene({
@@ -145,6 +147,7 @@ const portfolioSection = new ScrollMagic.Scene({
         document.getElementById('contact-img').classList.remove('slide');
         document.getElementById('contact-content').classList.remove('slide');
         document.getElementById('mailid').disabled = true;
+        Medialinks(false);
     }
 })
 .on('leave', function (e) {
@@ -156,14 +159,17 @@ const portfolioSection = new ScrollMagic.Scene({
         document.getElementById('contact-img').classList.add('slide');
         document.getElementById('contact-content').classList.add('slide');
         document.getElementById('mailid').disabled = false;
+        Medialinks(true)
     } else if(e.scrollDirection == "REVERSE") {
         addRemovePortfolioSlide(false);
         document.getElementById('slider').classList.remove('contactLeft','contactLeftReverse');
     }
 })
-// .addIndicators({
-//     colorEnd: "#ffffff",
-// })
+.addIndicators({
+    colorStart:  "#ffffff00",
+    colorEnd: "#ffffff00",
+    colorTrigger:"#ffffff00",
+})
 .addTo(controller);
 
 
@@ -186,6 +192,7 @@ document.getElementById('menu-icon').addEventListener("click", function () {
 function clearActive() {
     document.getElementById('intro-icon').classList.remove('active');
     document.getElementById('about-icon').classList.remove('active');
+    document.getElementById('education-icon').classList.remove('active');
     document.getElementById('portfolio-icon').classList.remove('active');
     document.getElementById('contact-icon').classList.remove('active');
 }
@@ -296,3 +303,19 @@ TxtType.prototype.tick = function() {
     that.tick();
     }, delta);
 };
+
+function Medialinks (add) {
+    if (add) {
+    document.getElementById('contact-facebook').href = "https://facebook.com/";
+    document.getElementById('contact-instagram').href = "https://instagram.com/roshie.ta";
+    document.getElementById('contact-twitter').href = "https://twitter.com/";
+    document.getElementById('contact-linkedin').href = "https://linkedin.com/in/roshitha-rajesh";
+    document.getElementById('contact-github').href = "https://github.com/roshie";
+    } else {
+        document.getElementById('contact-facebook').href = "";
+        document.getElementById('contact-instagram').href = "";
+        document.getElementById('contact-twitter').href = "";
+        document.getElementById('contact-linkedin').href = "";
+        document.getElementById('contact-github').href = "";
+    }
+}
