@@ -40,7 +40,7 @@ window.onload = function() {
 
 const controller = new ScrollMagic.Controller();
 const holdStars = new ScrollMagic.Scene({
-    duration: 1500,
+    duration: 4000,
     triggerHook: 0,
     reverse: true,
     offset: 0.1,
@@ -61,7 +61,7 @@ const holdStars = new ScrollMagic.Scene({
 .addTo(controller);
 
 const sliderScene = new ScrollMagic.Scene({
-    duration: 500,
+    duration: 1000,
     triggerHook: 0,
     reverse: true,
     offset: 30,
@@ -98,10 +98,10 @@ const sliderScene = new ScrollMagic.Scene({
 .addTo(controller);
 
 const educationSection = new ScrollMagic.Scene({
-    duration: 300,
+    duration: 1000,
     triggerHook: 0,
     reverse: true,
-    offset: 570,
+    offset: 1050,
 })
 .on('enter', function (e) {
     if (e.scrollDirection == "FORWARD"){
@@ -128,10 +128,10 @@ const educationSection = new ScrollMagic.Scene({
 .addTo(controller);
 
 const portfolioSection = new ScrollMagic.Scene({
-    duration: 290,
+    duration: 1000,
     triggerHook: 0,
     reverse: true,
-    offset: 900,
+    offset: 2050,
 })
 .on('enter', function (e) {
     if (e.scrollDirection == "FORWARD"){
@@ -143,6 +143,9 @@ const portfolioSection = new ScrollMagic.Scene({
         addRemovePortfolioSlide(true);
         document.getElementById('contact-img').classList.remove('slide');
         document.getElementById('contact-content').classList.remove('slide');
+        // document.getElementById('contact').style.display = "none";
+        // document.getElementById('contact').style.transition = "display 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;";
+        // document.getElementById('contact').style.opacity = 0;
     }
 })
 .on('leave', function (e) {
@@ -153,7 +156,9 @@ const portfolioSection = new ScrollMagic.Scene({
         document.getElementById('social-media').style.opacity = 0;
         document.getElementById('contact-img').classList.add('slide');
         document.getElementById('contact-content').classList.add('slide');
-
+        // document.getElementById('contact').style.display = "block";
+        // document.getElementById('contact').style.transition = "display 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;";
+        // document.getElementById('contact').style.opacity = 1;
     } else if(e.scrollDirection == "REVERSE") {
         addRemovePortfolioSlide(false);
         document.getElementById('slider').classList.remove('contactLeft','contactLeftReverse');
