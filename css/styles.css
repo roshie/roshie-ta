@@ -402,7 +402,80 @@ li {
   left: 10%;
   right: 10%;
 }
-
+#contact {
+  height: 55vh;
+  width: 80vw;
+  position: fixed;
+  /* overflow: hidden; */
+  top: 50%;
+  left: 50%;
+  margin-top: -30vh;
+  margin-left: -40vw;
+}
+.contact-img {
+  width: 30vw;
+}
+#contact-content {
+  text-align: left;
+  height: 100%;
+  margin-top: 5%;
+}
+#contact-title {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease 0s;
+}
+#contact-mail {
+  color: #ffffff;
+  font-size: 2vw;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.5s ease 0s;
+}
+.contact-social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.contact-icon {
+  color: white;
+  margin-left: 0px;
+  margin-right: 40px;
+  transition: all 0.5s ease 0s;
+  font-size: 2vw;
+}
+.go-btn {
+  background-color: #cc005f;
+  border-color: #cc005f;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+  height: 30px;
+}
+.input-mail {
+  background-color: transparent;
+  border-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: white;
+  padding-left: 5px;
+  height: 30px;
+}
+#contact-content-1 {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#contact-content-2 {
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+}
 @media only screen and (min-width: 769px) {
   #slider {
     background-color: #cc005fd5;
@@ -651,5 +724,22 @@ li {
   }
   .portfolio-tags {
     display: none;
+  }
+  #contact-title {
+    font-size: 24px;
+  }
+  #contact-mail {
+    font-size: 20px;
+  }
+  .contact-icon {
+    font-size: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #contact-content {
+    text-align: center;
+  }
+  .contact-social-icons {
+    justify-content: center;
   }
 }
