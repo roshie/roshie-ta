@@ -326,7 +326,7 @@ li {
 }
 .portfolio-tags {
   margin-top: 10px;
-  transform: translateY(500%);
+  transform: translateY(0%); /*change to 500 for hover*/
   transition: all 0.2s ease 0.3s;
 }
 .portfolio-box:hover.slide > .portfolio-tags {
@@ -676,7 +676,8 @@ li {
   }
   #about-quote {
     font-size: 14px;
-    margin-top: 0;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
   }
   #about-me-container {
     text-align: center;
