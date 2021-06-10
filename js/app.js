@@ -217,6 +217,30 @@ document.getElementById('contact-icon-a').addEventListener('click',function(){
     document.getElementById('contact-icon').classList.add('active');
 });
 
+window.onscroll = function () {
+    var scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scroll >= 0 && scroll < 30) {
+            clearActive();
+            document.getElementById('intro-icon').classList.add('active');
+        }
+        else if (scroll >= 30 && scroll < 1030) {
+            clearActive();
+            document.getElementById('about-icon').classList.add('active');
+        }
+        else if (scroll >= 1030 && scroll < 2030) {
+            clearActive();
+            document.getElementById('education-icon').classList.add('active');
+        }
+        else if (scroll >= 2030 && scroll < 3050) {
+            clearActive();
+            document.getElementById('portfolio-icon').classList.add('active');
+        }
+        else {
+            clearActive();
+            document.getElementById('contact-icon').classList.add('active');
+        }
+};
+
 function addRemoveAboutSlide(add) {
     if (add) {
         document.getElementById('about-me').classList.add('slide');
