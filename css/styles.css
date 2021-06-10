@@ -327,10 +327,11 @@ li {
 .portfolio-tags {
   margin-top: 10px;
   transform: translateY(500%);
-  transition: all 0.2s ease 1.5s;
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 }
 .portfolio-box.slide > .portfolio-tags {
   /*change to hover instead of slide*/
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 1.5s;
   transform: translateY(0%);
 }
 .tag {
