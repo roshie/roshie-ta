@@ -326,10 +326,11 @@ li {
 }
 .portfolio-tags {
   margin-top: 10px;
-  transform: translateY(0%); /*change to 500 for hover*/
+  transform: translateY(500%);
   transition: all 0.2s ease 0.3s;
 }
-.portfolio-box:hover.slide > .portfolio-tags {
+.portfolio-box.slide > .portfolio-tags {
+  /*change to hover instead of slide*/
   transform: translateY(0%);
 }
 .tag {
