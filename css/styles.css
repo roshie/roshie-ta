@@ -327,7 +327,7 @@ li {
 .portfolio-tags {
   margin-top: 10px;
   transform: translateY(500%);
-  transition: all 0.2s ease 0.3s;
+  transition: all 0.2s ease 1.5s;
 }
 .portfolio-box.slide > .portfolio-tags {
   /*change to hover instead of slide*/
